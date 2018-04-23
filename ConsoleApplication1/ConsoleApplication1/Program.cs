@@ -17,17 +17,17 @@ namespace ConsoleApplication1
             // SqlConnection localConection = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = \"c:\\users\\187684\\documents\\visual studio 2015\\Projects\\ConsoleApplication1\\ConsoleApplication1\\DB1.mdf\"; Integrated Security = True");
             //SqlConnection localConection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = 'C:\Users\187684\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\DB1.mdf'; Integrated Security = True");
             //AppDomain.CurrentDomain.SetData("DataDirectory", @"C:\Users\187684\Documents\Visual Studio 2015\Projects\ConsoleApplication1\ConsoleApplication1");
-            SqlConnection localConection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\DB1.mdf; Integrated Security = True");
+            SqlConnection localConnection = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = |DataDirectory|\DB1.mdf; Integrated Security = True");
             
-            SqlConnection remoteConection = new SqlConnection("Data Source=IBM-13;Initial Catalog=Northwind;User ID=SA;Password=praktyka");
+            SqlConnection remoteConnection = new SqlConnection("Data Source=IBM-13;Initial Catalog=Northwind;User ID=SA;Password=praktyka");
 
            
 
             try
             {
-                localConection.StateChange += new StateChangeEventHandler(StateChange);
-                localConection.Open();
-                SqlCommand cmd1 = localConection.CreateCommand();
+                localConnection.StateChange += new StateChangeEventHandler(StateChange);
+                localConnection.Open();
+                SqlCommand cmd1 = localConnection.CreateCommand();
                 cmd1.CommandText = "drop table a; drop table b";
                 cmd1.ExecuteNonQuery();
                 cmd1.CommandText = "Create table a(a1 int); insert into a values (1),(2),(3)";
@@ -41,7 +41,7 @@ namespace ConsoleApplication1
             }
             finally
             {
-                localConection.Close();
+                localConnection.Close();
             }
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -52,14 +52,14 @@ namespace ConsoleApplication1
             builder.UserID = Console.ReadLine();
             Console.Write("Haslo: ");
             builder.Password = Console.ReadLine();
-            remoteConection = new SqlConnection(builder.ConnectionString);
-            Console.WriteLine("Connection timeout: {0}s", remoteConection.ConnectionTimeout);
+            remoteConnection = new SqlConnection(builder.ConnectionString);
+            Console.WriteLine("Connection timeout: {0}s", remoteConnection.ConnectionTimeout);
 
             try
             {
-                remoteConection.StateChange += new StateChangeEventHandler(StateChange);
-                remoteConection.Open();
-                SqlCommand cmd2 = remoteConection.CreateCommand();
+                remoteConnection.StateChange += new StateChangeEventHandler(StateChange);
+                remoteConnection.Open();
+                SqlCommand cmd2 = remoteConnection.CreateCommand();
                 cmd2.CommandText = "drop table a; drop table b";
                 cmd2.ExecuteNonQuery();
                 cmd2.CommandText = "Create table a(a1 int); insert into a values (1),(2),(3)";
@@ -73,7 +73,7 @@ namespace ConsoleApplication1
             }
             finally
             {
-                remoteConection.Close();
+                remoteConnection.Close();
             }
             //con.Dispose();
             Console.ReadKey();
