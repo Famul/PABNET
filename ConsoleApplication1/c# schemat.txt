@@ -1,0 +1,26 @@
+Uzyskiwanie informacji schematu z elementu DataReader
+Gdy DataReader — jest otwarty, informacje mo¿na pobraæ schematu o bie¿¹cy wynik za pomoc¹ ustawiæ GetSchemaTable metody.GetSchemaTable zwraca DataTable obiekt wype³niony wierszy i kolumn, które zawieraj¹ informacje dotycz¹ce schematu dla bie¿¹cego zestawu wyników.DataTable zawiera jeden wiersz dla ka¿dej kolumny zestawu wyników. Ka¿da kolumna wiersza tabeli Schemat mapowany na w³aœciwoœæ kolumny zwracane w zestaw wyników, gdzie ColumnName jest nazw¹ w³aœciwoœci i wartoœci kolumny jest wartoœæ w³aœciwoœci. Poni¿szy przyk³adowy kod zapisuje informacje schematu dla DataReader —.
+
+
+static void GetSchemaInfo(SqlConnection connection)
+{
+    using (connection)
+    {
+        SqlCommand command = new SqlCommand(
+          "SELECT CategoryID, CategoryName FROM Categories;",
+          connection);
+        connection.Open();
+
+        SqlDataReader reader = command.ExecuteReader();
+        DataTable schemaTable = reader.GetSchemaTable();
+
+        foreach (DataRow row in schemaTable.Rows)
+        {
+            foreach (DataColumn column in schemaTable.Columns)
+            {
+                Console.WriteLine(String.Format("{0} = {1}",
+                   column.ColumnName, row[column]));
+            }
+        }
+    }
+}

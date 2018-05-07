@@ -1,0 +1,33 @@
+Projektowanie aplikacji bazodanowych w technologii NET 
+------------------------------------------------------ 
+ 1) opis s³owny czego dotyczy baza danych i do czego s³u¿y (baza mo¿e zawieraæ do 5-6 tabel i mieæ ograniczon¹ funkcjonalnoœæ)
+ 2) w bazie powinny byæ przynajmniej dwie role (Administrator i U¿ytkownik)
+ 3) Przypadki u¿ycia dla ka¿dej grupy (graficznie).
+ 4) przedstwiæ strukturê bazy danych w postaci relacyjnej.
+    Na diagramach powinny byæ widoczne typy danych, ograniczenia 
+    i wiêzy integralnoœci - relacje) 
+ 5) Do³¹czyæ skrypt z przyk³adow¹ struktur¹ bazy danych. 
+    Z poziomu aplikacji administrator powinien mieæ mo¿liwoœæ utworzenia ca³ej bazy z danymi przyk³adowymi 
+    (skasuje star¹ bazê i utworzy now¹ z ca³¹ struktur¹ i danymi). 
+ 6) Aplikacja powinna zawieraæ:
+    - modu³ logowania
+    - modu³ dla adminstratora do zarz¹dzania ca³¹ struktur¹ danych przechowywanych w tabelach
+    - modu³ dla u¿ytkownika do realizacji zaplanowanych funkcjonalnoœci
+    - obs³ugê b³êdów zwi¹zanych z baz¹ danych (i nie tylko)
+    - mo¿liwoœæ wybierania, sortowania i przegl¹dania danych wg. funkcjonalnoœci
+    - modu³ przedstawiaj¹cy w sposób graficzny pewne elementy czasowe (np. sprzeda¿ w danym roku lub miesi¹cu)
+    - status po³¹czenia z baz¹ danych i jaki tryb wykorzystujemy.
+    - kodowanie has³a (dowoln¹ metod¹), które jest przechowywane w bazie danych.  
+    - baza danych SQL Server (lokalnie lub serwer)
+    - powinny pojawiaæ siê okna typu nadrzêdne- podrzêdne (podformularze)
+    - powinna byæ przynajmniej jedna kolumna z danymi binarnymi np. zdjêcia.
+    - korzystamy z LINQ to ..., EF, Dataset lub DataReader (aplikacja mo¿e byæ desktopowa lub webowa)
+	(Czêœæ administracyjna mog³abyby byæ desktopowa a webowa np. dla czêœci u¿ytkownika) 
+ 7) Ca³oœæ opisujemy w sprawozdaniu i dok³adamy Ÿród³a wersj¹ instlacyjn¹ jeœli wersja desktopowa 
+    a wersja webowa z opisem uruchamiania jeœli jest (ma byæ uruchamiana w œrodowisku Visual Studio)
+
+Jeœli istnieje wersja Webowa mo¿na wykorzystywaæ oprócz HTML dodatkowo JavaScript, Bootstrap, CSS w celu zwiêkszenia funkcjonalnoœci 
+i lepszego wygl¹du aplikacji
+Zaczynamy oddawaæ 9, 10 zajêcia.
+Oddajemy do koñca sesji (lipiec 2018).
+
