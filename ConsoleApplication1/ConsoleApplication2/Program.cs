@@ -22,7 +22,7 @@ namespace ConsoleApplication2
 
             try
             {
-                remoteConnection.StateChange += new StateChangeEventHandler(StateChange);
+                //remoteConnection.StateChange += new StateChangeEventHandler(StateChange);
                 remoteConnection.Open();
                 SqlCommand cmd2 = remoteConnection.CreateCommand();
                 cmd2.CommandText = "select categoryid, categoryname from Categories order by 1";
@@ -75,14 +75,20 @@ namespace ConsoleApplication2
 
                 }
                 reader.Close();
-
-                cmd2.CommandText = "insert into employees(lastname, firstname, title, titleofcourtesy) values('Marecki', 'Jan','Dyrektor','Mr'), ('Ma', 'Jan','Dyr','Mr'), " +
+                SqlCommand cmd3 = new SqlCommand();
+                cmd3.CommandType = CommandType.Text;
+                cmd3.Connection = remoteConnection;
+                cmd3.CommandText = "set nocount off; insert into employees(lastname, firstname, title, titleofcourtesy) values('Marecki', 'Jan','Dyrektor','Mr'), ('Ma', 'Jan','Dyr','Mr'), " +
                     "('Maru', 'Mar','Prof','Mrs'), ('M', 'J','DJ','Mr')";
-                int rowsInserted = cmd2.ExecuteNonQuery();
-                Console.WriteLine("Wstawiono: {0}", rowsInserted);
-                cmd2.CommandText = "update employees set lastname = 'Maraaaaa' where employeeid = 11";
-                int rowsUpdated = cmd2.ExecuteNonQuery();
+                int rowsInserted;
+                rowsInserted = cmd3.ExecuteNonQuery();
+                Console.WriteLine("Wstawiono: " + rowsInserted);
+                cmd2.CommandText = "update employees set lastname = 'Maraaaaa' where employeeid = 55";
+                int rowsUpdated; 
+                rowsUpdated = cmd2.ExecuteNonQuery();
                 Console.WriteLine("Zmieniono: {0}", rowsUpdated);
+
+               
 
             }
             catch (Exception e)
