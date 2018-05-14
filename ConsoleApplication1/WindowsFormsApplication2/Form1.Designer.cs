@@ -30,6 +30,7 @@
         {
             this.dataView = new System.Windows.Forms.DataGridView();
             this.loadDataButton = new System.Windows.Forms.Button();
+            this.patchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             // 
             // loadDataButton
             // 
-            this.loadDataButton.Location = new System.Drawing.Point(276, 381);
+            this.loadDataButton.Location = new System.Drawing.Point(12, 381);
             this.loadDataButton.Name = "loadDataButton";
             this.loadDataButton.Size = new System.Drawing.Size(84, 30);
             this.loadDataButton.TabIndex = 1;
@@ -51,11 +52,22 @@
             this.loadDataButton.UseVisualStyleBackColor = true;
             this.loadDataButton.Click += new System.EventHandler(this.loadDataButton_Click);
             // 
+            // patchButton
+            // 
+            this.patchButton.Location = new System.Drawing.Point(590, 381);
+            this.patchButton.Name = "patchButton";
+            this.patchButton.Size = new System.Drawing.Size(75, 30);
+            this.patchButton.TabIndex = 2;
+            this.patchButton.Text = "Aktualizuj";
+            this.patchButton.UseVisualStyleBackColor = true;
+            this.patchButton.Click += new System.EventHandler(this.patchButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 423);
+            this.Controls.Add(this.patchButton);
             this.Controls.Add(this.loadDataButton);
             this.Controls.Add(this.dataView);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.DataGridView dataView;
         private System.Windows.Forms.Button loadDataButton;
+        private System.Windows.Forms.Button patchButton;
     }
 }
 

@@ -27,6 +27,12 @@ namespace WindowsFormsApplication2
                              let Magazyn = x.UnitPrice * x.UnitsInStock
                              select new { x.ProductName, x.UnitPrice, x.UnitsInStock, Magazyn };
             dataView.DataSource = zapytanie;
+            
+        }
+
+        private void patchButton_Click(object sender, EventArgs e)
+        {
+            db.SubmitChanges();
         }
     }
 }
