@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication4", "ConsoleApplication4\ConsoleApplication4.csproj", "{32480F58-2162-41AB-BDA5-B542BEBEAF9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication5", "ConsoleApplication5\ConsoleApplication5.csproj", "{23B9BDB5-A753-446F-97E8-2D8478B94195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication2", "WindowsFormsApplication2\WindowsFormsApplication2.csproj", "{3442EC02-BBAF-421D-8737-4549E9E9A9BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{32480F58-2162-41AB-BDA5-B542BEBEAF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32480F58-2162-41AB-BDA5-B542BEBEAF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32480F58-2162-41AB-BDA5-B542BEBEAF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B9BDB5-A753-446F-97E8-2D8478B94195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B9BDB5-A753-446F-97E8-2D8478B94195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B9BDB5-A753-446F-97E8-2D8478B94195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B9BDB5-A753-446F-97E8-2D8478B94195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3442EC02-BBAF-421D-8737-4549E9E9A9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3442EC02-BBAF-421D-8737-4549E9E9A9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3442EC02-BBAF-421D-8737-4549E9E9A9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3442EC02-BBAF-421D-8737-4549E9E9A9BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
