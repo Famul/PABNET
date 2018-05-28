@@ -159,7 +159,7 @@ namespace WindowsFormsApplication2
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ProductID
 		{
 			get
@@ -179,7 +179,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", AutoSync=AutoSync.Always, DbType="NVarChar(40) NOT NULL", CanBeNull=false)]
 		public string ProductName
 		{
 			get
@@ -199,7 +199,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierID", DbType="Int")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierID", AutoSync=AutoSync.Always, DbType="Int")]
 		public System.Nullable<int> SupplierID
 		{
 			get
@@ -219,7 +219,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryID", DbType="Int")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryID", AutoSync=AutoSync.Always, DbType="Int")]
 		public System.Nullable<int> CategoryID
 		{
 			get
@@ -243,7 +243,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuantityPerUnit", DbType="NVarChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuantityPerUnit", AutoSync=AutoSync.Always, DbType="NVarChar(20)")]
 		public string QuantityPerUnit
 		{
 			get
@@ -263,7 +263,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitPrice", DbType="Money")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitPrice", AutoSync=AutoSync.Always, DbType="Money")]
 		public System.Nullable<decimal> UnitPrice
 		{
 			get
@@ -283,7 +283,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitsInStock", DbType="SmallInt")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitsInStock", AutoSync=AutoSync.Always, DbType="SmallInt")]
 		public System.Nullable<short> UnitsInStock
 		{
 			get
@@ -303,7 +303,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitsOnOrder", DbType="SmallInt")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitsOnOrder", AutoSync=AutoSync.Always, DbType="SmallInt")]
 		public System.Nullable<short> UnitsOnOrder
 		{
 			get
@@ -323,7 +323,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReorderLevel", DbType="SmallInt")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReorderLevel", AutoSync=AutoSync.Always, DbType="SmallInt")]
 		public System.Nullable<short> ReorderLevel
 		{
 			get
@@ -343,7 +343,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discontinued", DbType="Bit NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discontinued", AutoSync=AutoSync.Always, DbType="Bit NOT NULL")]
 		public bool Discontinued
 		{
 			get
@@ -454,7 +454,7 @@ namespace WindowsFormsApplication2
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int CategoryID
 		{
 			get
@@ -474,7 +474,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryName", DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryName", AutoSync=AutoSync.Always, DbType="NVarChar(15) NOT NULL", CanBeNull=false)]
 		public string CategoryName
 		{
 			get
@@ -494,7 +494,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", AutoSync=AutoSync.Always, DbType="NText", UpdateCheck=UpdateCheck.Never)]
 		public string Description
 		{
 			get
@@ -514,7 +514,7 @@ namespace WindowsFormsApplication2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Picture", AutoSync=AutoSync.Always, DbType="Image", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary Picture
 		{
 			get

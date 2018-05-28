@@ -29,65 +29,262 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label employeeIDLabel;
+            System.Windows.Forms.Label lastNameLabel;
+            System.Windows.Forms.Label firstNameLabel;
+            System.Windows.Forms.Label titleLabel;
+            System.Windows.Forms.Label titleOfCourtesyLabel;
+            System.Windows.Forms.Label birthDateLabel;
+            System.Windows.Forms.Label hireDateLabel;
+            System.Windows.Forms.Label addressLabel;
+            System.Windows.Forms.Label regionLabel;
+            System.Windows.Forms.Label postalCodeLabel;
+            System.Windows.Forms.Label countryLabel;
+            System.Windows.Forms.Label homePhoneLabel;
+            System.Windows.Forms.Label extensionLabel;
+            System.Windows.Forms.Label photoLabel;
+            System.Windows.Forms.Label notesLabel;
+            System.Windows.Forms.Label reportsToLabel;
+            System.Windows.Forms.Label photoPathLabel;
+            System.Windows.Forms.Label cityLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.employeesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApplication3.DataSet1();
-            this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriesTableAdapter = new WindowsFormsApplication3.DataSet1TableAdapters.CategoriesTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApplication3.DataSet1TableAdapters.TableAdapterManager();
-            this.categoriesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.categoriesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.categoriesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.employeesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.employeeIDTextBox = new System.Windows.Forms.TextBox();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.titleOfCourtesyTextBox = new System.Windows.Forms.TextBox();
+            this.birthDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.hireDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.regionTextBox = new System.Windows.Forms.TextBox();
+            this.postalCodeTextBox = new System.Windows.Forms.TextBox();
+            this.countryComboBox = new System.Windows.Forms.ComboBox();
+            this.homePhoneTextBox = new System.Windows.Forms.TextBox();
+            this.extensionTextBox = new System.Windows.Forms.TextBox();
+            this.photoPictureBox = new System.Windows.Forms.PictureBox();
+            this.notesTextBox = new System.Windows.Forms.TextBox();
+            this.reportsToTextBox = new System.Windows.Forms.TextBox();
+            this.photoPathTextBox = new System.Windows.Forms.TextBox();
+            this.cityComboBox = new System.Windows.Forms.ComboBox();
+            this.viewCityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new WindowsFormsApplication3.DataSet1TableAdapters.EmployeesTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApplication3.DataSet1TableAdapters.TableAdapterManager();
+            this.view_CityTableAdapter = new WindowsFormsApplication3.DataSet1TableAdapters.View_CityTableAdapter();
+            this.viewCountryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_CountryTableAdapter = new WindowsFormsApplication3.DataSet1TableAdapters.View_CountryTableAdapter();
+            employeeIDLabel = new System.Windows.Forms.Label();
+            lastNameLabel = new System.Windows.Forms.Label();
+            firstNameLabel = new System.Windows.Forms.Label();
+            titleLabel = new System.Windows.Forms.Label();
+            titleOfCourtesyLabel = new System.Windows.Forms.Label();
+            birthDateLabel = new System.Windows.Forms.Label();
+            hireDateLabel = new System.Windows.Forms.Label();
+            addressLabel = new System.Windows.Forms.Label();
+            regionLabel = new System.Windows.Forms.Label();
+            postalCodeLabel = new System.Windows.Forms.Label();
+            countryLabel = new System.Windows.Forms.Label();
+            homePhoneLabel = new System.Windows.Forms.Label();
+            extensionLabel = new System.Windows.Forms.Label();
+            photoLabel = new System.Windows.Forms.Label();
+            notesLabel = new System.Windows.Forms.Label();
+            reportsToLabel = new System.Windows.Forms.Label();
+            photoPathLabel = new System.Windows.Forms.Label();
+            cityLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingNavigator)).BeginInit();
+            this.employeesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingNavigator)).BeginInit();
-            this.categoriesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewCityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewCountryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataSet1
+            // employeeIDLabel
             // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            employeeIDLabel.AutoSize = true;
+            employeeIDLabel.Location = new System.Drawing.Point(21, 32);
+            employeeIDLabel.Name = "employeeIDLabel";
+            employeeIDLabel.Size = new System.Drawing.Size(70, 13);
+            employeeIDLabel.TabIndex = 1;
+            employeeIDLabel.Text = "Employee ID:";
             // 
-            // categoriesBindingSource
+            // lastNameLabel
             // 
-            this.categoriesBindingSource.DataMember = "Categories";
-            this.categoriesBindingSource.DataSource = this.dataSet1;
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Location = new System.Drawing.Point(21, 58);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            lastNameLabel.TabIndex = 3;
+            lastNameLabel.Text = "Last Name:";
             // 
-            // categoriesTableAdapter
+            // firstNameLabel
             // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Location = new System.Drawing.Point(21, 84);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            firstNameLabel.TabIndex = 5;
+            firstNameLabel.Text = "First Name:";
             // 
-            // tableAdapterManager
+            // titleLabel
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriesTableAdapter = this.categoriesTableAdapter;
-            this.tableAdapterManager.EmployeesTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication3.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            titleLabel.AutoSize = true;
+            titleLabel.Location = new System.Drawing.Point(21, 110);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new System.Drawing.Size(30, 13);
+            titleLabel.TabIndex = 7;
+            titleLabel.Text = "Title:";
             // 
-            // categoriesBindingNavigator
+            // titleOfCourtesyLabel
             // 
-            this.categoriesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.categoriesBindingNavigator.BindingSource = this.categoriesBindingSource;
-            this.categoriesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.categoriesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.categoriesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            titleOfCourtesyLabel.AutoSize = true;
+            titleOfCourtesyLabel.Location = new System.Drawing.Point(21, 136);
+            titleOfCourtesyLabel.Name = "titleOfCourtesyLabel";
+            titleOfCourtesyLabel.Size = new System.Drawing.Size(88, 13);
+            titleOfCourtesyLabel.TabIndex = 9;
+            titleOfCourtesyLabel.Text = "Title Of Courtesy:";
+            // 
+            // birthDateLabel
+            // 
+            birthDateLabel.AutoSize = true;
+            birthDateLabel.Location = new System.Drawing.Point(21, 163);
+            birthDateLabel.Name = "birthDateLabel";
+            birthDateLabel.Size = new System.Drawing.Size(57, 13);
+            birthDateLabel.TabIndex = 11;
+            birthDateLabel.Text = "Birth Date:";
+            // 
+            // hireDateLabel
+            // 
+            hireDateLabel.AutoSize = true;
+            hireDateLabel.Location = new System.Drawing.Point(21, 189);
+            hireDateLabel.Name = "hireDateLabel";
+            hireDateLabel.Size = new System.Drawing.Size(55, 13);
+            hireDateLabel.TabIndex = 13;
+            hireDateLabel.Text = "Hire Date:";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(21, 214);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(48, 13);
+            addressLabel.TabIndex = 15;
+            addressLabel.Text = "Address:";
+            // 
+            // regionLabel
+            // 
+            regionLabel.AutoSize = true;
+            regionLabel.Location = new System.Drawing.Point(21, 266);
+            regionLabel.Name = "regionLabel";
+            regionLabel.Size = new System.Drawing.Size(44, 13);
+            regionLabel.TabIndex = 19;
+            regionLabel.Text = "Region:";
+            // 
+            // postalCodeLabel
+            // 
+            postalCodeLabel.AutoSize = true;
+            postalCodeLabel.Location = new System.Drawing.Point(21, 292);
+            postalCodeLabel.Name = "postalCodeLabel";
+            postalCodeLabel.Size = new System.Drawing.Size(67, 13);
+            postalCodeLabel.TabIndex = 21;
+            postalCodeLabel.Text = "Postal Code:";
+            // 
+            // countryLabel
+            // 
+            countryLabel.AutoSize = true;
+            countryLabel.Location = new System.Drawing.Point(21, 318);
+            countryLabel.Name = "countryLabel";
+            countryLabel.Size = new System.Drawing.Size(46, 13);
+            countryLabel.TabIndex = 23;
+            countryLabel.Text = "Country:";
+            // 
+            // homePhoneLabel
+            // 
+            homePhoneLabel.AutoSize = true;
+            homePhoneLabel.Location = new System.Drawing.Point(21, 345);
+            homePhoneLabel.Name = "homePhoneLabel";
+            homePhoneLabel.Size = new System.Drawing.Size(72, 13);
+            homePhoneLabel.TabIndex = 25;
+            homePhoneLabel.Text = "Home Phone:";
+            // 
+            // extensionLabel
+            // 
+            extensionLabel.AutoSize = true;
+            extensionLabel.Location = new System.Drawing.Point(21, 371);
+            extensionLabel.Name = "extensionLabel";
+            extensionLabel.Size = new System.Drawing.Size(56, 13);
+            extensionLabel.TabIndex = 27;
+            extensionLabel.Text = "Extension:";
+            // 
+            // photoLabel
+            // 
+            photoLabel.AutoSize = true;
+            photoLabel.Location = new System.Drawing.Point(409, 32);
+            photoLabel.Name = "photoLabel";
+            photoLabel.Size = new System.Drawing.Size(38, 13);
+            photoLabel.TabIndex = 29;
+            photoLabel.Text = "Photo:";
+            // 
+            // notesLabel
+            // 
+            notesLabel.AutoSize = true;
+            notesLabel.Location = new System.Drawing.Point(21, 397);
+            notesLabel.Name = "notesLabel";
+            notesLabel.Size = new System.Drawing.Size(38, 13);
+            notesLabel.TabIndex = 31;
+            notesLabel.Text = "Notes:";
+            // 
+            // reportsToLabel
+            // 
+            reportsToLabel.AutoSize = true;
+            reportsToLabel.Location = new System.Drawing.Point(21, 423);
+            reportsToLabel.Name = "reportsToLabel";
+            reportsToLabel.Size = new System.Drawing.Size(63, 13);
+            reportsToLabel.TabIndex = 33;
+            reportsToLabel.Text = "Reports To:";
+            // 
+            // photoPathLabel
+            // 
+            photoPathLabel.AutoSize = true;
+            photoPathLabel.Location = new System.Drawing.Point(21, 449);
+            photoPathLabel.Name = "photoPathLabel";
+            photoPathLabel.Size = new System.Drawing.Size(63, 13);
+            photoPathLabel.TabIndex = 35;
+            photoPathLabel.Text = "Photo Path:";
+            // 
+            // cityLabel
+            // 
+            cityLabel.AutoSize = true;
+            cityLabel.Location = new System.Drawing.Point(21, 240);
+            cityLabel.Name = "cityLabel";
+            cityLabel.Size = new System.Drawing.Size(27, 13);
+            cityLabel.TabIndex = 36;
+            cityLabel.Text = "City:";
+            // 
+            // employeesBindingNavigator
+            // 
+            this.employeesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.employeesBindingNavigator.BindingSource = this.employeesBindingSource;
+            this.employeesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.employeesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.employeesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -99,17 +296,52 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.categoriesBindingNavigatorSaveItem});
-            this.categoriesBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.categoriesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.categoriesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.categoriesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.categoriesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.categoriesBindingNavigator.Name = "categoriesBindingNavigator";
-            this.categoriesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.categoriesBindingNavigator.Size = new System.Drawing.Size(754, 25);
-            this.categoriesBindingNavigator.TabIndex = 0;
-            this.categoriesBindingNavigator.Text = "bindingNavigator1";
+            this.employeesBindingNavigatorSaveItem});
+            this.employeesBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.employeesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.employeesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.employeesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.employeesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.employeesBindingNavigator.Name = "employeesBindingNavigator";
+            this.employeesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.employeesBindingNavigator.Size = new System.Drawing.Size(743, 25);
+            this.employeesBindingNavigator.TabIndex = 0;
+            this.employeesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -143,17 +375,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -161,7 +386,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -170,99 +395,265 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorAddNewItem
+            // employeesBindingNavigatorSaveItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.employeesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.employeesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("employeesBindingNavigatorSaveItem.Image")));
+            this.employeesBindingNavigatorSaveItem.Name = "employeesBindingNavigatorSaveItem";
+            this.employeesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.employeesBindingNavigatorSaveItem.Text = "Save Data";
+            this.employeesBindingNavigatorSaveItem.Click += new System.EventHandler(this.employeesBindingNavigatorSaveItem_Click_1);
             // 
-            // bindingNavigatorDeleteItem
+            // employeeIDTextBox
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.employeeIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "EmployeeID", true));
+            this.employeeIDTextBox.Location = new System.Drawing.Point(115, 29);
+            this.employeeIDTextBox.Name = "employeeIDTextBox";
+            this.employeeIDTextBox.Size = new System.Drawing.Size(200, 20);
+            this.employeeIDTextBox.TabIndex = 2;
             // 
-            // categoriesBindingNavigatorSaveItem
+            // lastNameTextBox
             // 
-            this.categoriesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.categoriesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("categoriesBindingNavigatorSaveItem.Image")));
-            this.categoriesBindingNavigatorSaveItem.Name = "categoriesBindingNavigatorSaveItem";
-            this.categoriesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.categoriesBindingNavigatorSaveItem.Text = "Save Data";
-            this.categoriesBindingNavigatorSaveItem.Click += new System.EventHandler(this.categoriesBindingNavigatorSaveItem_Click_1);
+            this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "LastName", true));
+            this.lastNameTextBox.Location = new System.Drawing.Point(115, 55);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.lastNameTextBox.TabIndex = 4;
             // 
-            // categoriesDataGridView
+            // firstNameTextBox
             // 
-            this.categoriesDataGridView.AutoGenerateColumns = false;
-            this.categoriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewImageColumn1});
-            this.categoriesDataGridView.DataSource = this.categoriesBindingSource;
-            this.categoriesDataGridView.Location = new System.Drawing.Point(12, 28);
-            this.categoriesDataGridView.Name = "categoriesDataGridView";
-            this.categoriesDataGridView.Size = new System.Drawing.Size(730, 272);
-            this.categoriesDataGridView.TabIndex = 1;
+            this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "FirstName", true));
+            this.firstNameTextBox.Location = new System.Drawing.Point(115, 81);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.firstNameTextBox.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn1
+            // titleTextBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "CategoryID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "CategoryID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.titleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Title", true));
+            this.titleTextBox.Location = new System.Drawing.Point(115, 107);
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.Size = new System.Drawing.Size(200, 20);
+            this.titleTextBox.TabIndex = 8;
             // 
-            // dataGridViewTextBoxColumn2
+            // titleOfCourtesyTextBox
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CategoryName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CategoryName";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.titleOfCourtesyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "TitleOfCourtesy", true));
+            this.titleOfCourtesyTextBox.Location = new System.Drawing.Point(115, 133);
+            this.titleOfCourtesyTextBox.Name = "titleOfCourtesyTextBox";
+            this.titleOfCourtesyTextBox.Size = new System.Drawing.Size(200, 20);
+            this.titleOfCourtesyTextBox.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn3
+            // birthDateDateTimePicker
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Description";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.birthDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesBindingSource, "BirthDate", true));
+            this.birthDateDateTimePicker.Location = new System.Drawing.Point(115, 159);
+            this.birthDateDateTimePicker.Name = "birthDateDateTimePicker";
+            this.birthDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.birthDateDateTimePicker.TabIndex = 12;
             // 
-            // dataGridViewImageColumn1
+            // hireDateDateTimePicker
             // 
-            this.dataGridViewImageColumn1.DataPropertyName = "Picture";
-            this.dataGridViewImageColumn1.HeaderText = "Picture";
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Visible = false;
+            this.hireDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.employeesBindingSource, "HireDate", true));
+            this.hireDateDateTimePicker.Location = new System.Drawing.Point(115, 185);
+            this.hireDateDateTimePicker.Name = "hireDateDateTimePicker";
+            this.hireDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.hireDateDateTimePicker.TabIndex = 14;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Address", true));
+            this.addressTextBox.Location = new System.Drawing.Point(115, 211);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(200, 20);
+            this.addressTextBox.TabIndex = 16;
+            // 
+            // regionTextBox
+            // 
+            this.regionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Region", true));
+            this.regionTextBox.Location = new System.Drawing.Point(115, 263);
+            this.regionTextBox.Name = "regionTextBox";
+            this.regionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.regionTextBox.TabIndex = 20;
+            // 
+            // postalCodeTextBox
+            // 
+            this.postalCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "PostalCode", true));
+            this.postalCodeTextBox.Location = new System.Drawing.Point(115, 289);
+            this.postalCodeTextBox.Name = "postalCodeTextBox";
+            this.postalCodeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.postalCodeTextBox.TabIndex = 22;
+            // 
+            // countryComboBox
+            // 
+            this.countryComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Country", true));
+            this.countryComboBox.DataSource = this.viewCountryBindingSource;
+            this.countryComboBox.DisplayMember = "Country";
+            this.countryComboBox.FormattingEnabled = true;
+            this.countryComboBox.Location = new System.Drawing.Point(115, 315);
+            this.countryComboBox.Name = "countryComboBox";
+            this.countryComboBox.Size = new System.Drawing.Size(200, 21);
+            this.countryComboBox.TabIndex = 24;
+            this.countryComboBox.ValueMember = "Country";
+            // 
+            // homePhoneTextBox
+            // 
+            this.homePhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "HomePhone", true));
+            this.homePhoneTextBox.Location = new System.Drawing.Point(115, 342);
+            this.homePhoneTextBox.Name = "homePhoneTextBox";
+            this.homePhoneTextBox.Size = new System.Drawing.Size(200, 20);
+            this.homePhoneTextBox.TabIndex = 26;
+            // 
+            // extensionTextBox
+            // 
+            this.extensionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Extension", true));
+            this.extensionTextBox.Location = new System.Drawing.Point(115, 368);
+            this.extensionTextBox.Name = "extensionTextBox";
+            this.extensionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.extensionTextBox.TabIndex = 28;
+            // 
+            // photoPictureBox
+            // 
+            this.photoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.employeesBindingSource, "Photo", true));
+            this.photoPictureBox.Location = new System.Drawing.Point(503, 32);
+            this.photoPictureBox.Name = "photoPictureBox";
+            this.photoPictureBox.Size = new System.Drawing.Size(200, 273);
+            this.photoPictureBox.TabIndex = 30;
+            this.photoPictureBox.TabStop = false;
+            // 
+            // notesTextBox
+            // 
+            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "Notes", true));
+            this.notesTextBox.Location = new System.Drawing.Point(115, 394);
+            this.notesTextBox.Name = "notesTextBox";
+            this.notesTextBox.Size = new System.Drawing.Size(200, 20);
+            this.notesTextBox.TabIndex = 32;
+            // 
+            // reportsToTextBox
+            // 
+            this.reportsToTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "ReportsTo", true));
+            this.reportsToTextBox.Location = new System.Drawing.Point(115, 420);
+            this.reportsToTextBox.Name = "reportsToTextBox";
+            this.reportsToTextBox.Size = new System.Drawing.Size(200, 20);
+            this.reportsToTextBox.TabIndex = 34;
+            // 
+            // photoPathTextBox
+            // 
+            this.photoPathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "PhotoPath", true));
+            this.photoPathTextBox.Location = new System.Drawing.Point(115, 446);
+            this.photoPathTextBox.Name = "photoPathTextBox";
+            this.photoPathTextBox.Size = new System.Drawing.Size(200, 20);
+            this.photoPathTextBox.TabIndex = 36;
+            // 
+            // cityComboBox
+            // 
+            this.cityComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employeesBindingSource, "City", true));
+            this.cityComboBox.DataSource = this.viewCityBindingSource;
+            this.cityComboBox.DisplayMember = "city";
+            this.cityComboBox.FormattingEnabled = true;
+            this.cityComboBox.Location = new System.Drawing.Point(115, 237);
+            this.cityComboBox.Name = "cityComboBox";
+            this.cityComboBox.Size = new System.Drawing.Size(200, 21);
+            this.cityComboBox.TabIndex = 37;
+            this.cityComboBox.ValueMember = "city";
+            // 
+            // viewCityBindingSource
+            // 
+            this.viewCityBindingSource.DataMember = "View_City";
+            this.viewCityBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // dataSet1BindingSource
+            // 
+            this.dataSet1BindingSource.DataSource = this.dataSet1;
+            this.dataSet1BindingSource.Position = 0;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriesTableAdapter = null;
+            this.tableAdapterManager.EmployeesTableAdapter = this.employeesTableAdapter;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApplication3.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // view_CityTableAdapter
+            // 
+            this.view_CityTableAdapter.ClearBeforeFill = true;
+            // 
+            // viewCountryBindingSource
+            // 
+            this.viewCountryBindingSource.DataMember = "View_Country";
+            this.viewCountryBindingSource.DataSource = this.dataSet1;
+            // 
+            // view_CountryTableAdapter
+            // 
+            this.view_CountryTableAdapter.ClearBeforeFill = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 619);
-            this.Controls.Add(this.categoriesDataGridView);
-            this.Controls.Add(this.categoriesBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(743, 542);
+            this.Controls.Add(cityLabel);
+            this.Controls.Add(this.cityComboBox);
+            this.Controls.Add(employeeIDLabel);
+            this.Controls.Add(this.employeeIDTextBox);
+            this.Controls.Add(lastNameLabel);
+            this.Controls.Add(this.lastNameTextBox);
+            this.Controls.Add(firstNameLabel);
+            this.Controls.Add(this.firstNameTextBox);
+            this.Controls.Add(titleLabel);
+            this.Controls.Add(this.titleTextBox);
+            this.Controls.Add(titleOfCourtesyLabel);
+            this.Controls.Add(this.titleOfCourtesyTextBox);
+            this.Controls.Add(birthDateLabel);
+            this.Controls.Add(this.birthDateDateTimePicker);
+            this.Controls.Add(hireDateLabel);
+            this.Controls.Add(this.hireDateDateTimePicker);
+            this.Controls.Add(addressLabel);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(regionLabel);
+            this.Controls.Add(this.regionTextBox);
+            this.Controls.Add(postalCodeLabel);
+            this.Controls.Add(this.postalCodeTextBox);
+            this.Controls.Add(countryLabel);
+            this.Controls.Add(this.countryComboBox);
+            this.Controls.Add(homePhoneLabel);
+            this.Controls.Add(this.homePhoneTextBox);
+            this.Controls.Add(extensionLabel);
+            this.Controls.Add(this.extensionTextBox);
+            this.Controls.Add(photoLabel);
+            this.Controls.Add(this.photoPictureBox);
+            this.Controls.Add(notesLabel);
+            this.Controls.Add(this.notesTextBox);
+            this.Controls.Add(reportsToLabel);
+            this.Controls.Add(this.reportsToTextBox);
+            this.Controls.Add(photoPathLabel);
+            this.Controls.Add(this.photoPathTextBox);
+            this.Controls.Add(this.employeesBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingNavigator)).EndInit();
+            this.employeesBindingNavigator.ResumeLayout(false);
+            this.employeesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingNavigator)).EndInit();
-            this.categoriesBindingNavigator.ResumeLayout(false);
-            this.categoriesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.photoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewCityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewCountryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,10 +662,10 @@
         #endregion
 
         private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource categoriesBindingSource;
-        private DataSet1TableAdapters.CategoriesTableAdapter categoriesTableAdapter;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private DataSet1TableAdapters.EmployeesTableAdapter employeesTableAdapter;
         private DataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator categoriesBindingNavigator;
+        private System.Windows.Forms.BindingNavigator employeesBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -286,12 +677,29 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton categoriesBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView categoriesDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.ToolStripButton employeesBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox employeeIDTextBox;
+        private System.Windows.Forms.TextBox lastNameTextBox;
+        private System.Windows.Forms.TextBox firstNameTextBox;
+        private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.TextBox titleOfCourtesyTextBox;
+        private System.Windows.Forms.DateTimePicker birthDateDateTimePicker;
+        private System.Windows.Forms.DateTimePicker hireDateDateTimePicker;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox regionTextBox;
+        private System.Windows.Forms.TextBox postalCodeTextBox;
+        private System.Windows.Forms.ComboBox countryComboBox;
+        private System.Windows.Forms.TextBox homePhoneTextBox;
+        private System.Windows.Forms.TextBox extensionTextBox;
+        private System.Windows.Forms.PictureBox photoPictureBox;
+        private System.Windows.Forms.TextBox notesTextBox;
+        private System.Windows.Forms.TextBox reportsToTextBox;
+        private System.Windows.Forms.TextBox photoPathTextBox;
+        private System.Windows.Forms.ComboBox cityComboBox;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private System.Windows.Forms.BindingSource viewCityBindingSource;
+        private DataSet1TableAdapters.View_CityTableAdapter view_CityTableAdapter;
+        private System.Windows.Forms.BindingSource viewCountryBindingSource;
+        private DataSet1TableAdapters.View_CountryTableAdapter view_CountryTableAdapter;
     }
 }
-

@@ -42,7 +42,7 @@ namespace WindowsFormsApplication2
         private void patchButton_Click(object sender, EventArgs e)
         {
             db.ExecuteCommand("set nocount off");
-            db.SubmitChanges();
+            db.SubmitChanges(); //auto-sync property must be set to always
         }
 
         private void addButton_Click(object sender, EventArgs e)
