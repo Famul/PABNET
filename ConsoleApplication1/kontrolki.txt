@@ -1,0 +1,5 @@
+To samo zrealizuj z kontrolkami:
+- LinqDataSource
+- EntityDataSource
+- SqlDataSorce
+- ObjectDataSource
